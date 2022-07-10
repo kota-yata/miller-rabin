@@ -1,0 +1,15 @@
+{
+  "name": "carmichael",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test/index.spec.js"
+  },
+  "author": "",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "tsc": "^2.0.4"
+  }
+}
