@@ -1,6 +1,6 @@
 import { randomInt } from "./utils/random.js";
 
-// Use BigInt() at the top of every function as JavaScript doesn't know its type is bigint otherwise'
+// Use BigInt() at the top of every function as JavaScript doesn't know its type is bigint otherwise
 
 // Imitate pow() of Math lib in Python
 export const power = (base: bigint, exponent: bigint, mod: bigint = 0n): bigint => {
