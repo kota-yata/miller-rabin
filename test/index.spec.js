@@ -21,10 +21,10 @@ const testMR = (n, k, expected) => {
 };
 
 testPower(441713175, 280931774, 61035, 1000000007);
-// testPower(270136, 232342, 11234342, 421341);
-// testPower(34, 123, 255, 923);
-// testPower(46656, 6, 6);
-// testPower(4, 4, 3, 12);
+testPower(270136, 232342, 11234342, 421341);
+testPower(34, 123, 255, 923);
+testPower(46656, 6, 6);
+testPower(4, 4, 3, 12);
 
 testMR(2n, 5, true);
 testMR(20171203n, 5, false);

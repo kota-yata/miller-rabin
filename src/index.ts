@@ -1,5 +1,7 @@
 import { randomInt } from "./utils/random.js";
 
+// Use BigInt() at the top of every function as JavaScript doesn't know its type is bigint otherwise'
+
 // Imitate pow() of Math lib in Python
 export const power = (base: bigint, exponent: bigint, mod: bigint = 0n): bigint => {
   base = BigInt(base);
@@ -22,6 +24,7 @@ const millerRabin = (n: bigint, t: bigint, s: bigint): boolean => {
   n = BigInt(n);
   t = BigInt(t);
   s = BigInt(s);
+  //------------
   const a = randomInt(1, Number(n)); // 1 < a < n
   let temp = power(a, t, n);
   if (temp === 1n || temp === n - 1n) return true;
@@ -47,10 +50,9 @@ export const testPrimality = (n: bigint , k: number): boolean => {
     t = t >> 1n;
     s++;
   }
-  console.log(t, s);
   let isPrime = true;
   for (let i = 0; i < k; i++) {
-    if (!millerRabin(BigInt(n), BigInt(t), BigInt(s))) {
+    if (!millerRabin(n, t, s)) {
       isPrime = false;
       break;
     }
