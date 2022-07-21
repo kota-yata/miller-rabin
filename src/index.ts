@@ -1,4 +1,4 @@
-import { randomInt } from "./utils/random.js";
+import { randomBigInt } from "./utils/random.js";
 
 // Use BigInt() at the top of every function as JavaScript doesn't know its type is bigint otherwise
 
@@ -25,7 +25,7 @@ const millerRabin = (n: bigint, t: bigint, s: bigint): boolean => {
   t = BigInt(t);
   s = BigInt(s);
   //------------
-  const a = randomInt(1, Number(n)); // 1 < a < n
+  const a = randomBigInt(1, Number(n)); // 1 < a < n
   let temp = power(a, t, n);
   if (temp === 1n || temp === n - 1n) return true;
   let isPrime = false;
